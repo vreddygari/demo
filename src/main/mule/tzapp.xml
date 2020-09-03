@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:request-config>
 	<flow name="tzappFlow" doc:id="f377e2f8-cdaa-4c5b-9ed7-d5c988370a62" >
 		<http:listener doc:name="Listener" doc:id="0897a2ff-352c-4ed8-895c-b5cc0bea691c" config-ref="HTTP_Listener_config" path="/tz/{region}/{city}"/>
-		<logger level="INFO" doc:name="Logger" doc:id="aa394910-2b8b-4a97-98a5-8eb0f61fadd4" message="Req received"/>
+		<logger level="INFO" doc:name="Logger" doc:id="aa394910-2b8b-4a97-98a5-8eb0f61fadd4" message="Req received for region"/>
 		<http:request method="GET" doc:name="Request" doc:id="8d42ef63-f8e2-4ed4-a713-e1f8a788101a" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
 			<http:uri-params ><![CDATA[#[output application/java
 ---
